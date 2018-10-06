@@ -2,10 +2,9 @@ module.exports = {
   base: '/',
   title: 'Fractal',
   serviceWorker: false,
-  description: 'Powerful component libraries & styleguides that fit the way you work.',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }]
-  ],
+  description:
+    'Powerful component libraries & styleguides that fit the way you work.',
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   themeConfig: {
     docsDir: 'docs',
     lastUpdated: 'Last Updated', // string | boolean
@@ -17,10 +16,7 @@ module.exports = {
     //   apiKey: '514014891767c249c3ca94ade449c631',
     //   indexName: 'fractal'
     // },
-    nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'API', link: '/api/' }
-    ],
+    nav: [{ text: 'Guide', link: '/guide/' }, { text: 'API', link: '/api/' }],
     sidebar: {
       '/guide/': [
         {
@@ -42,7 +38,7 @@ module.exports = {
             '/guide/core-concepts/context-data',
             '/guide/core-concepts/configuration-files',
             '/guide/core-concepts/naming',
-            '/guide/core-concepts/statuses',
+            '/guide/core-concepts/statuses'
           ]
         },
         {
@@ -64,7 +60,7 @@ module.exports = {
           children: [
             '/guide/documentation/',
             '/guide/documentation/dynamic-docs',
-            '/guide/documentation/configuration-reference',
+            '/guide/documentation/configuration-reference'
           ]
         },
         {
@@ -72,7 +68,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/guide/collections/',
-            '/guide/collections/configuration-reference',
+            '/guide/collections/configuration-reference'
           ]
         },
         {
@@ -83,7 +79,7 @@ module.exports = {
             '/guide/web/development-server',
             '/guide/web/exporting-static-html',
             '/guide/web/default-theme',
-            '/guide/web/configuration-reference',
+            '/guide/web/configuration-reference'
           ]
         },
         {
@@ -119,9 +115,7 @@ module.exports = {
         {
           title: 'Getting Started',
           collapsable: false,
-          children: [
-            '/api/'
-          ]
+          children: ['/api/']
         },
         {
           title: 'Endpoints',
@@ -150,4 +144,4 @@ module.exports = {
       ]
     }
   }
-}
+};
