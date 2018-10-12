@@ -164,15 +164,16 @@ The reference syntax only applies to items of **the same type** - a component ca
 
  const request = require('request-promise'); // require the request-promise module
 
- // make the request to the API, returns a Promise
- const response = request({
+ // options for the request to the API
+ var options = {
      uri: 'http://www.mysite-api.com/members',
      json: true
- });
-
+ };
+ 
+ var memberData = [];
+ // make the request to the API, returns a Promise
  // do some post-processing on the response to wrangle it into the correct format
- response.then(function (membersApiData) {
-     const memberData = [];
+ request(options).then(function (membersApiData) {
      for (let member of membersApiData) {
          memberData.push({
              name: `${member.firstName} ${member.lastName}`,
@@ -184,7 +185,7 @@ The reference syntax only applies to items of **the same type** - a component ca
 
  module.exports = {
  	context: {
- 		members: response // use the response as context data for our template.
+ 		members: memberData // use the response as context data for our template.
  	}
  };
  ```
